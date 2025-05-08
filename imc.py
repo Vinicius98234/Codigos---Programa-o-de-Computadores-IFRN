@@ -1,16 +1,29 @@
 print ("Calculadora de IMC")
 
-altura = float(input("Informe sua Altura: "))
+altura = float(input("Informe sua Altura(m): "))
 
-peso = float(input("Informe seu Peso: "))
+peso = float(input("Informe seu Peso(kg): "))
 
-imc = (peso) / (altura**2)
+imc = (peso) / ((altura/100)**2)
 
-print (f"Seu IMC é: {imc}")
+print ("Seu IMC é: ", round(imc,1))
 
-if imc > 25 < 29.9:
-    print ("Você está no sobrepeso")
-elif imc < 24.9 :
-    print ("você está com peso normal")
-elif imc > 30:
-    print ("Você está em obesidade")
+if imc > 40:
+    print("Obesidade Extrema")
+    print("Obesidade Grau 3")
+else:
+    if  30 < imc < 40:
+        print("Obesidade")
+        print("Obesidade Grau 2")
+        
+    else:
+        if 25 < imc < 30:
+            print("Sobrepeso")
+            print("Obesidade Grau 1")
+        else:
+            if 18.5 < imc < 25:
+                print("Peso Normal")
+                print("Obesidade Grau 0")
+            else:
+                print("Magreza")
+                print("Obesidade Grau 0")

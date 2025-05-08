@@ -19,16 +19,16 @@ xdoquadrado2 = x02 + lx2
 ydoquadrado2 = y02 + hy2
 
 
-if  xdoquadrado1 <= x02: 
+if  xdoquadrado1 < x02: 
     print("Não houve intersecção")
 else: 
-    if xdoquadrado2 <= x01:
+    if xdoquadrado2 < x01:
         print("Não houve intersecção")
     else:
-        if ydoquadrado1 <= y02:
+        if ydoquadrado1 < y02:
             print("Não houve intersecção")
         else:
-            if ydoquadrado2 <= y01:
+            if ydoquadrado2 < y01:
                 print("Não houve intersecção")
             else:
                 print("Houve intersecção")
